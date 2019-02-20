@@ -1,3 +1,116 @@
+fieldset {
+  border: none !important;
+}
+
+.visuallyhidden {
+  position: absolute;
+  clip: rect(0 0 0 0);
+  height: 1px;
+  width: 1px;
+  overflow: hidden;
+  padding: 0;
+  border: 0;
+}
+
+.skip-link:focus {
+  height: auto;
+  width: auto;
+  clip: auto;
+  background: white;
+  padding: 3px 10px;
+  z-index: 100000;
+}
+
+input:focus, textarea:focus, select:focus {
+  border: 2px solid mediumpurple;
+}
+
+a.content-link,
+.soc a {
+  color: blue;
+}
+
+a.content-link:hover,
+a.content-link:focus,
+a.content-link:active {
+  text-decoration: underline;
+}
+
+.link-icon {
+  width: 15px;
+  height: 15px;
+  display: inline-block;
+  margin-right: 3px;
+  background: url("../img/icn-link.png");
+  background-size: contain;
+}
+
+.external-link-icon {
+  width: 15px;
+  height: 15px;
+  display: inline-block;
+  margin-right: 3px;
+  background: url("../img/icn-external-link.svg");
+  background-size: contain;
+}
+
+a:focus, button:focus,
+input[type=checkbox]:focus,
+input[type=radio]:focus,
+.button:focus:not(:active) {
+  outline: 2px solid mediumpurple;
+}
+
+.button.is-info,
+.button.is-link {
+  background-color: blue;
+}
+
+.new-post-button {
+  background: blue !important;
+}
+
+.tag:not(body).is-primary {
+  background-color: darkgreen;
+}
+
+.tag:not(body).is-link {
+  background-color: blue;
+}
+
+.tag:not(body).is-danger {
+  background-color: #da1a31;
+}
+
+.tag:not(body).is-success {
+  background-color: green;
+}
+
+.subtitle {
+  color: black;
+}
+
+.hero.is-info {
+  background-color: blue;
+}
+
+.tabs.is-boxed li.is-active a,
+.hero.is-info .tabs.is-boxed li.is-active a:hover {
+  color: blue !important;
+}
+
+.has-text-grey-light {
+  color: black !important;
+}
+
+.help.is-success {
+  color: green;
+}
+
+.help.is-danger {
+  color: #da1a31;
+}
+
 .hero-bg {
   background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)),
     url("https://unsplash.it/1200/900?random") no-repeat center center fixed;
@@ -7,6 +120,7 @@
 .tabs {
   margin-bottom: -1px !important;
   position: relative;
+  overflow: initial;
 }
 .tab-content {
   padding: 2rem;
