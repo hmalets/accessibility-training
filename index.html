@@ -11,7 +11,8 @@
 </head>
 
 <body>
-  <section class="hero hero-bg is-fullheight">
+  <section class="hero hero-bg is-fullheight" aria-labelledby="banner-label">
+    <span class="visuallyhidden" id="banner-label">Banner and navigation</span>
     <a href="#maincontent" class="skip-link visuallyhidden">Skip to main content</a>
     <header class="hero-head">
       <div class="navbar">
@@ -21,7 +22,7 @@
             <a class="navbar-item has-text-white" href="#">
               <img alt="Epam logo" src="https://www.epam.com/content/dam/epam/global/logo_white-blue.svg" style="width: 100%;">
             </a>
-            <span class="navbar-burger burger" data-target="navbarMenu">
+            <span tabindex="0" aria-haspopup="true" aria-owns="navbarMenu" class="navbar-burger burger" data-target="navbarMenu" aria-label="menu button">
               <span></span>
               <span></span>
               <span></span>
@@ -32,7 +33,7 @@
             <div class="navbar-end">
               <span class="navbar-item">
                 <a class="button is-white is-outlined" href="#">
-                  <span class="icon">
+                  <span class="icon" aria-hidden="true">
                     <i class="fa fa-home"></i>
                   </span>
                   <span>Home</span>
@@ -40,7 +41,7 @@
               </span>
               <span class="navbar-item">
                 <a class="button is-white is-outlined" href="#">
-                  <span class="icon">
+                  <span class="icon" aria-hidden="true">
                     <i class="fab fa-superpowers"></i>
                   </span>
                   <span>Examples</span>
@@ -48,7 +49,7 @@
               </span>
               <span class="navbar-item">
                 <a class="button is-white is-outlined" href="#">
-                  <span class="icon">
+                  <span class="icon" aria-hidden="true">
                     <i class="fa fa-book"></i>
                   </span>
                   <span>Documentation</span>
@@ -56,7 +57,7 @@
               </span>
               <span class="navbar-item">
                 <a class="button is-white is-outlined" href="#">
-                  <span class="icon">
+                  <span class="icon" aria-hidden="true">
                     <i class="fab fa-github"></i>
                   </span>
                   <span>View Source</span>
@@ -82,7 +83,8 @@
                 <input class="input" id="notify">
               </p>
               <p class="control">
-                <a role="button" tabindex="0" class="button is-info">Notify Me</a>
+                <a role="button" tabindex="0" class="button is-info" id="notify-button">Notify Me</a>
+                <span aria-live="polite" class="visuallyhidden" id="live-area"></span>
               </p>
             </div>
           </div>
@@ -97,9 +99,9 @@
     </footer>
   </section>
   <main id="maincontent">
-    <section class="section" id="about">
+    <section class="section" id="about" aria-labelledby="about-us">
       <header class="section-heading has-text-centered">
-        <h2 class="title is-2">About Us</h2>
+        <h2 class="title is-2" id="about-us">About Us</h2>
         <h5 class="subtitle is-5">We of all trades, master of "some"</h5>
         <div class="container">
           <p>Web developers with more than <strong>4 years</strong> of well-rounded experience with a degree in the
@@ -225,7 +227,9 @@
       </div>
     </section>
 
-    <section class="has-background-danger">
+    <section class="has-background-danger" aria-labelledby="statistics" aria-describedby="statistics-desc">
+      <span class="visuallyhidden" id="statistics" aria-hidden="true">Some statistics</span>
+      <span class="visuallyhidden" id="statistics-desc">Here goes some statistic info about our company</span>
       <div class="info-tiles container">
         <div class="tile is-ancestor has-text-centered">
             <div class="tile is-parent">
@@ -256,7 +260,8 @@
       </div>
     </section>
 
-    <section class="hero has-background-grey-light">
+    <section class="hero has-background-grey-light" aria-labelledby="key-features">
+      <span class="visuallyhidden" id="key-features" aria-hidden="true">Key features</span>
       <div class="container features">
         <header class="section-heading has-text-centered">
           <h2 class="title is-2">Three key features</h2>
@@ -266,14 +271,14 @@
         <div class="columns">
           <div class="column is-4">
             <div class="card is-shady">
-              <div class="card-image has-text-centered">
+              <div class="card-image has-text-centered" aria-hidden="true">
                 <i class="fa fa-paw"></i>
               </div>
               <div class="card-content">
                 <div class="content">
                   <div>Tristique senectus et netus et.</div>
                   <p>Purus semper eget duis at tellus at urna condimentum mattis. Non blandit massa enim nec. Integer enim neque volutpat ac tincidunt vitae semper quis. Accumsan tortor posuere ac ut consequat semper viverra nam.</p>
-                  <p><a class="content-link" href="#"><i class="link-icon"></i>Learn more</a></p>
+                  <p><a class="content-link" href="#"><i class="link-icon" aria-hidden="true"></i>Learn more</a></p>
                 </div>
               </div>
             </div>
@@ -281,7 +286,7 @@
 
           <div class="column is-4">
             <div class="card is-shady">
-              <div class="card-image has-text-centered">
+              <div class="card-image has-text-centered" aria-hidden="true">
                 <i class="fab fa-empire"></i>
               </div>
               <div class="card-content">
@@ -289,7 +294,7 @@
                   <div>Tempor orci dapibus ultrices in.</div>
                   <p>Ut venenatis tellus in metus vulputate. Amet consectetur adipiscing elit pellentesque. Sed arcu non odio euismod lacinia at quis risus. Faucibus turpis in eu mi bibendum neque egestas cmonsu songue. Phasellus vestibulum lorem
                     sed risus.</p>
-                  <p><a class="content-link" href="#"><i class="link-icon"></i>Learn more</a></p>
+                  <p><a class="content-link" href="#"><i class="link-icon" aria-hidden="true"></i>Learn more</a></p>
                 </div>
               </div>
             </div>
@@ -297,14 +302,14 @@
 
           <div class="column is-4">
             <div class="card is-shady">
-              <div class="card-image has-text-centered">
+              <div class="card-image has-text-centered" aria-hidden="true">
                 <i class="fab fa-apple"></i>
               </div>
               <div class="card-content">
                 <div class="content">
                   <div> Leo integer malesuada nunc vel risus. </div>
                   <p>Imperdiet dui accumsan sit amet nulla facilisi morbi. Fusce ut placerat orci nulla pellentesque dignissim enim. Libero id faucibus nisl tincidunt eget nullam. Commodo viverra maecenas accumsan lacus vel facilisis.</p>
-                  <p><a class="content-link" href="#"><i class="link-icon"></i>Learn more</a></p>
+                  <p><a class="content-link" href="#"><i class="link-icon" aria-hidden="true"></i>Learn more</a></p>
                 </div>
               </div>
             </div>
@@ -313,36 +318,37 @@
       </div>
     </section>
 
-    <section class="hero is-info">
+    <section class="hero is-info" aria-labelledby="topics">
+      <span class="visuallyhidden" id="topics" aria-hidden="true">Topics</span>
       <div class="hero-body">
         <header class="container">
           <h2 class="title">List of topics</h2>
           <h5 class="subtitle">We are always in touch we the outside world</h5>
         </header>
       </div>
-      <div class="tabs is-boxed is-centered main-menu" id="nav">
+      <div class="tabs is-boxed is-centered main-menu" id="nav" role="tablist">
         <ul>
-          <li data-target="pane-1" id="1">
+          <li data-target="pane-1" id="1" role="tab">
             <a tabindex="0">
-              <span class="icon is-small"><i class="fa fa-image"></i></span>
+              <span class="icon is-small" aria-hidden="true"><i class="fa fa-image"></i></span>
               <span>Pictures</span>
             </a>
           </li>
-          <li data-target="pane-2" id="2" class="is-active">
+          <li data-target="pane-2" id="2" class="is-active" role="tab" aria-selected="true">
             <a tabindex="0">
-              <span class="icon is-small"><i class="fab fa-empire"></i></span>
+              <span class="icon is-small" aria-hidden="true"><i class="fab fa-empire"></i></span>
               <span>Article</span>
             </a>
           </li>
-          <li data-target="pane-3" id="3">
+          <li data-target="pane-3" id="3" role="tab">
             <a tabindex="0">
-              <span class="icon is-small"><i class="fab fa-superpowers"></i></span>
+              <span class="icon is-small" aria-hidden="true"><i class="fab fa-superpowers"></i></span>
               <span>Team</span>
             </a>
           </li>
-          <li data-target="pane-4" id="4">
+          <li data-target="pane-4" id="4" role="tab">
             <a tabindex="0">
-              <span class="icon is-small"><i class="fa fa-film"></i></span>
+              <span class="icon is-small" aria-hidden="true"><i class="fa fa-film"></i></span>
               <span>Video</span>
             </a>
           </li>
@@ -350,8 +356,9 @@
       </div>
     </section>
 
-    <section class="tab-content container">
-      <div class="tab-pane" id="pane-1" class="level">
+    <section class="tab-content container" aria-labelledby="content">
+      <span class="visuallyhidden" id="content" aria-hidden="true">Topic content</span>
+      <div class="tab-pane" id="pane-1" class="level" role="tabpanel">
         <div class="container">
           <div class="columns features">
             <div class="column is-4">
@@ -407,30 +414,30 @@
         </div>
       </div>
 
-      <div class="tab-pane" id="pane-3">
+      <div class="tab-pane" id="pane-3" role="tabpanel">
         <div class="columns medias">
           <div class="column">
             <div class="media">
-              <div class="media-left">
+              <div class="media-left" aria-hidden="true">
                 <i class="fab fa-github-square fa-4x"></i>
               </div>
               <div class="media-content">
                 <div class="content">
                   <p>
-                    <a class="content-link" href="#"><i class="link-icon"></i><strong>Dominic Ipsum</strong></a>
+                    <a class="content-link" href="#"><i class="link-icon" aria-hidden="true"></i><strong>Dominic Ipsum</strong></a>
                     <br> Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean efficitur sit amet massa fringilla egestas. Nullam condimentum luctus turpis.
                   </p>
                 </div>
               </div>
             </div>
             <div class="media">
-              <div class="media-left">
+              <div class="media-left" aria-hidden="true">
                 <i class="fab fa-empire fa-4x"></i>
               </div>
               <div class="media-content">
                 <div class="content">
                   <p>
-                    <a class="content-link" href="#"><i class="link-icon"></i><strong>Cassie Ipsum</strong></a>
+                    <a class="content-link" href="#"><i class="link-icon" aria-hidden="true"></i><strong>Cassie Ipsum</strong></a>
                     <br> Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean efficitur sit amet massa fringilla egestas. Nullam condimentum luctus turpis.
                   </p>
                 </div>
@@ -439,26 +446,26 @@
           </div>
           <div class="column">
             <div class="media">
-              <div class="media-left">
+              <div class="media-left" aria-hidden="true">
                 <i class="fab fa-ravelry fa-4x"></i>
               </div>
               <div class="media-content">
                 <div class="content">
                   <p>
-                    <a class="content-link" href="#"><i class="link-icon"></i><strong>Avery Ipsum</strong></a>
+                    <a class="content-link" href="#"><i class="link-icon" aria-hidden="true"></i><strong>Avery Ipsum</strong></a>
                     <br> Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean efficitur sit amet massa fringilla egestas. Nullam condimentum luctus turpis.
                   </p>
                 </div>
               </div>
             </div>
             <div class="media">
-              <div class="media-left">
+              <div class="media-left" aria-hidden="true">
                 <i class="fab fa-github-alt fa-4x"></i>
               </div>
               <div class="media-content">
                 <div class="content">
                   <p>
-                    <a class="content-link" href="#"><i class="link-icon"></i><strong>io Ipsum</strong></a>
+                    <a class="content-link" href="#"><i class="link-icon" aria-hidden="true"></i><strong>io Ipsum</strong></a>
                     <br> Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean efficitur sit amet massa fringilla egestas. Nullam condimentum luctus turpis.
                   </p>
                 </div>
@@ -468,7 +475,7 @@
         </div>
       </div>
 
-      <div class="tab-pane" id="pane-4">
+      <div class="tab-pane" id="pane-4" role="tabpanel">
         <div class="columns is-centered">
           <div class="column is-three-quarters">
             <div class="title has-text-centered">Inspired video</div>
@@ -479,7 +486,7 @@
         </div>
       </div>
 
-      <div class="tab-pane is-active" id="pane-2">
+      <div class="tab-pane is-active" id="pane-2" role="tabpanel">
         <article class="content">
           <h2 class="is-1 title">Hello World</h2>
           <p>Lorem ipsum<sup><a class="content-link" href="#">[1]</a></sup> dolor sit amet, consectetur adipiscing elit. Nulla accumsan, metus ultrices eleifend gravida, nulla nunc varius lectus, nec rutrum justo nibh eu lectus. Ut vulputate semper dui. Fusce erat odio, sollicitudin vel erat vel, interdum mattis neque. Sub<sub>script</sub> works as well!</p>
@@ -492,7 +499,7 @@
             <li>Ut non enim metus.</li>
           </ul>
           <h4 class="is-3 title">Third level</h4>
-          <p>Quisque ante lacus, malesuada ac auctor vitae, congue <a class="content-link" href="#"><i class="external-link-icon"></i>non ante</a>. Phasellus lacus ex, semper ac tortor nec, fringilla condimentum orci. Fusce eu rutrum tellus.</p>
+          <p>Quisque ante lacus, malesuada ac auctor vitae, congue <a class="content-link" href="#"><i class="external-link-icon" aria-hidden="true"></i>non ante</a>. Phasellus lacus ex, semper ac tortor nec, fringilla condimentum orci. Fusce eu rutrum tellus.</p>
           <ol>
             <li>Donec blandit a lorem id convallis.</li>
             <li>Cras gravida arcu at diam gravida gravida.</li>
@@ -576,10 +583,10 @@
       </div>
     </section>
 
-    <section class="section has-background-grey-lighter">
+    <section class="section has-background-grey-lighter" aria-labelledby="tours">
       <div class="container has-text-centered">
           <header class="section-heading has-text-centered">
-            <h2 class="title is-2">Tours</h2>
+            <h2 class="title is-2" id="tours">Tours</h2>
             <h5 class="subtitle is-5">Outcoming dates for the best options</h5>
           </header>
 
@@ -651,9 +658,9 @@
       </div>
     </section>
 
-    <section class="section">
+    <section class="section" aria-labelledby="services">
       <header class="section-heading has-text-centered">
-        <h2 class="title is-2">Services</h2>
+        <h2 class="title is-2" id="services">Services</h2>
         <h5 class="subtitle is-5">What can I do for you?</h5>
       </header>
       <div class="container">
@@ -699,10 +706,10 @@
       </div>
     </section>
 
-    <section class="section has-background-grey-lighter">
+    <section class="section has-background-grey-lighter" aria-labelledby="portfolio">
       <div class="container">
         <header class="section-heading has-text-centered">
-          <h2 class="title is-2">Portfolio</h2>
+          <h2 class="title is-2" id="portfolio">Portfolio</h2>
           <h5 class="subtitle is-5">Our latest works</h5>
         </header>
 
@@ -866,10 +873,10 @@
       </section>
     </div>
 
-    <section class="section">
+    <section class="section" aria-labelledby="forum">
       <div class="container">
         <header class="section-heading has-text-centered">
-          <h2 class="title is-2">Forum</h2>
+          <h2 class="title is-2" id="forum">Forum</h2>
           <h5 class="subtitle is-5">Discuss any topic with no leaving this page</h5>
         </header>
 
@@ -907,7 +914,7 @@
                     </div>
                   </div>
                   <div class="media-right">
-                    <span class="has-text-grey-light"><i class="fa fa-comments"></i> 1</span>
+                    <span class="has-text-grey-light"><i class="fa fa-comments" aria-label="comments"></i> 1</span>
                   </div>
                 </div>
               </div>
@@ -929,7 +936,7 @@
                     </div>
                   </div>
                   <div class="media-right">
-                    <span class="has-text-grey-light"><i class="fa fa-comments"></i> 0</span>
+                    <span class="has-text-grey-light"><i class="fa fa-comments" aria-label="comments"></i> 0</span>
                   </div>
                 </div>
               </div>
@@ -951,7 +958,7 @@
                     </div>
                   </div>
                   <div class="media-right">
-                    <span class="has-text-grey-light"><i class="fa fa-comments"></i> 13</span>
+                    <span class="has-text-grey-light"><i class="fa fa-comments" aria-label="comments"></i> 13</span>
                   </div>
                 </div>
               </div>
@@ -973,7 +980,7 @@
                     </div>
                   </div>
                   <div class="media-right">
-                    <span class="has-text-grey-light"><i class="fa fa-comments"></i> 2</span>
+                    <span class="has-text-grey-light"><i class="fa fa-comments" aria-label="comments"></i> 2</span>
                   </div>
                 </div>
               </div>
@@ -995,7 +1002,7 @@
                     </div>
                   </div>
                   <div class="media-right">
-                    <span class="has-text-grey-light"><i class="fa fa-comments"></i> 2</span>
+                    <span class="has-text-grey-light"><i class="fa fa-comments" aria-label="comments"></i> 2</span>
                   </div>
                 </div>
               </div>
@@ -1017,7 +1024,7 @@
                     </div>
                   </div>
                   <div class="media-right">
-                    <span class="has-text-grey-light"><i class="fa fa-comments"></i> 2</span>
+                    <span class="has-text-grey-light"><i class="fa fa-comments" aria-label="comments"></i> 2</span>
                   </div>
                 </div>
               </div>
@@ -1027,7 +1034,8 @@
       </div>
     </section>
 
-    <section class="section has-background-light">
+    <section class="section has-background-light" aria-labelledby="contact-us">
+      <span class="visuallyhidden" id="contact-us" aria-hidden="true">Contact form</span>
       <div class="container">
         <header class="section-heading has-text-centered">
           <h2 class="title is-2">Contact us</h2>
@@ -1038,18 +1046,18 @@
           <div class="field">
             <label class="label" for="name">Name</label>
             <div class="control">
-              <input id="name" class="input" type="text" placeholder="Text input">
+              <input id="name" class="input" type="text" placeholder="Please input name">
             </div>
           </div>
 
           <div class="field">
             <label class="label" for="username">Username</label>
             <div class="control has-icons-left has-icons-right">
-              <input id="username" class="input is-success" type="text">
-              <span class="icon is-small is-left">
+              <input id="username" class="input is-success" type="text" placeholder="Please input username">
+              <span class="icon is-small is-left" aria-hidden="true">
                 <i class="fas fa-user"></i>
               </span>
-              <span class="icon is-small is-right">
+              <span class="icon is-small is-right" aria-hidden="true">
                 <i class="fas fa-check"></i>
               </span>
             </div>
@@ -1059,11 +1067,11 @@
           <div class="field">
             <label class="label" for="email">Email</label>
             <div class="control has-icons-left has-icons-right">
-              <input id="email" class="input is-danger" type="email" placeholder="Email input" value="hello@">
-              <span class="icon is-small is-left">
+              <input id="email" class="input is-danger" type="email" placeholder="Please input email" value="hello@" aria-invalid="true">
+              <span class="icon is-small is-left" aria-hidden="true">
                 <i class="fas fa-envelope"></i>
               </span>
-              <span class="icon is-small is-right">
+              <span class="icon is-small is-right" aria-hidden="true">
                 <i class="fas fa-exclamation-triangle"></i>
               </span>
             </div>
@@ -1093,7 +1101,7 @@
             <div class="control">
               <label class="checkbox">
                 <input type="checkbox">
-                I agree to the <a class="content-link" href="#"><i class="link-icon"></i>terms and conditions</a>
+                I agree to the <a class="content-link" href="#"><i class="link-icon" aria-hidden="true"></i>terms and conditions</a>
               </label>
             </div>
           </div>
@@ -1126,13 +1134,15 @@
       </div>
     </section>
 
-    <section class="section">
+    <section class="section" aria-labelledby="more-info" aria-describedby="more-info-desc">
+    <span class="visuallyhidden" id="more-info" aria-hidden="true">More info</span>
+    <span class="visuallyhidden" id="more-info-desc">More information about us</span>
     <div class="container">
       <div class="columns is-multiline">
         <div class="column is-one-third">
           <div class="notification media has-background-white">
             <div class="media-left">
-              <span class="icon">
+              <span class="icon" aria-hidden="true">
                 <i class="has-text-warning fas fa-columns fa-lg"></i>
               </span>
             </div>
@@ -1149,7 +1159,7 @@
         <div class="column is-one-third">
           <div class="notification has-background-white media">
             <div class="media-left">
-              <span class="icon has-text-info">
+              <span class="icon has-text-info" aria-hidden="true">
                 <i class="fab fa-lg fa-wpforms"></i>
               </span>
             </div>
@@ -1166,7 +1176,7 @@
         <div class="column is-one-third">
           <div class="notification has-background-white media">
             <div class="media-left">
-              <span class="icon has-text-danger">
+              <span class="icon has-text-danger" aria-hidden="true">
                 <i class="fas fa-lg fa-cubes"></i>
               </span>
             </div>
@@ -1183,7 +1193,7 @@
         <div class="column is-one-third">
           <div class="notification has-background-white media">
             <div class="media-left">
-              <span class="icon has-text-grey">
+              <span class="icon has-text-grey" aria-hidden="true">
                 <i class="fas fa-lg fa-cogs"></i>
               </span>
             </div>
@@ -1200,7 +1210,7 @@
         <div class="column is-one-third">
           <div class="notification has-background-white media">
             <div class="media-left">
-              <span class="icon has-text-primary">
+              <span class="icon has-text-primary" aria-hidden="true">
                 <i class="fas fa-lg fa-warehouse"></i>
               </span>
             </div>
@@ -1217,7 +1227,7 @@
         <div class="column is-one-third">
           <div class="notification has-background-white media">
             <div class="media-left">
-              <span class="icon has-text-danger">
+              <span class="icon has-text-danger" aria-hidden="true">
                 <i class="fas fa-lg fa-cube"></i>
               </span>
             </div>
@@ -1235,58 +1245,61 @@
     </div>
   </section>
   </main>
-  <footer class="footer">
+  <footer class="footer" aria-labelledby="links" aria-describedby="links-desc">
+    <span class="visuallyhidden" id="links" aria-hidden="true">Useful links</span>
+    <span class="visuallyhidden" id="links-desc">Very useful links listed</span>
     <div class="container">
       <div class="columns">
         <div class="column is-3 is-offset-2">
           <h3 class="is-3 title"><strong>Lessons</strong></h3>
           <ul>
-            <li><a class="content-link" href="#"><i class="link-icon"></i>Lorem ipsum dolor sit amet</a></li>
-            <li><a class="content-link" href="#"><i class="link-icon"></i>Vestibulum errato isse</a></li>
-            <li><a class="content-link" href="#"><i class="link-icon"></i>Lorem ipsum dolor sit amet</a></li>
-            <li><a class="content-link" href="#"><i class="link-icon"></i>Aisia caisia</a></li>
-            <li><a class="content-link" href="#"><i class="link-icon"></i>Murphy's law</a></li>
-            <li><a class="content-link" href="#"><i class="link-icon"></i>Flimsy Lavenrock</a></li>
-            <li><a class="content-link" href="#"><i class="link-icon"></i>Maven Mousie Lavender</a></li>
+            <li><a class="content-link" href="#"><i class="link-icon" aria-hidden="true"></i>Lorem ipsum dolor sit amet</a></li>
+            <li><a class="content-link" href="#"><i class="link-icon" aria-hidden="true"></i>Vestibulum errato isse</a></li>
+            <li><a class="content-link" href="#"><i class="link-icon" aria-hidden="true"></i>Lorem ipsum dolor sit amet</a></li>
+            <li><a class="content-link" href="#"><i class="link-icon" aria-hidden="true"></i>Aisia caisia</a></li>
+            <li><a class="content-link" href="#"><i class="link-icon" aria-hidden="true"></i>Murphy's law</a></li>
+            <li><a class="content-link" href="#"><i class="link-icon" aria-hidden="true"></i>Flimsy Lavenrock</a></li>
+            <li><a class="content-link" href="#"><i class="link-icon" aria-hidden="true"></i>Maven Mousie Lavender</a></li>
           </ul>
         </div>
         <div class="column is-3">
           <h3 class="is-3 title"><strong>News</strong></h3>
           <ul>
-            <li><a class="content-link" href="#"><i class="link-icon"></i>Labore et dolore magna aliqua</a></li>
-            <li><a class="content-link" href="#"><i class="link-icon"></i>Kanban airis sum eschelor</a></li>
-            <li><a class="content-link" href="#"><i class="link-icon"></i>Modular modern free</a></li>
-            <li><a class="content-link" href="#"><i class="link-icon"></i>The king of clubs</a></li>
-            <li><a class="content-link" href="#"><i class="link-icon"></i>The Discovery Dissipation</a></li>
-            <li><a class="content-link" href="#"><i class="link-icon"></i>Course Correction</a></li>
-            <li><a class="content-link" href="#"><i class="link-icon"></i>Better Angels</a></li>
+            <li><a class="content-link" href="#"><i class="link-icon" aria-hidden="true"></i>Labore et dolore magna aliqua</a></li>
+            <li><a class="content-link" href="#"><i class="link-icon" aria-hidden="true"></i>Kanban airis sum eschelor</a></li>
+            <li><a class="content-link" href="#"><i class="link-icon" aria-hidden="true"></i>Modular modern free</a></li>
+            <li><a class="content-link" href="#"><i class="link-icon" aria-hidden="true"></i>The king of clubs</a></li>
+            <li><a class="content-link" href="#"><i class="link-icon" aria-hidden="true"></i>The Discovery Dissipation</a></li>
+            <li><a class="content-link" href="#"><i class="link-icon" aria-hidden="true"></i>Course Correction</a></li>
+            <li><a class="content-link" href="#"><i class="link-icon" aria-hidden="true"></i>Better Angels</a></li>
           </ul>
         </div>
         <div class="column is-4">
           <h3 class="is-3 title"><strong>Help</strong></h3>
           <ul>
-            <li><a class="content-link" href="#"><i class="link-icon"></i>Objects in space</a></li>
-            <li><a class="content-link" href="#"><i class="link-icon"></i>Playing cards with coyote</a></li>
-            <li><a class="content-link" href="#"><i class="link-icon"></i>Goodbye Yellow Brick Road</a></li>
-            <li><a class="content-link" href="#"><i class="link-icon"></i>The Garden of Forking Paths</a></li>
-            <li><a class="content-link" href="#"><i class="link-icon"></i>Future Shock</a></li>
+            <li><a class="content-link" href="#"><i class="link-icon" aria-hidden="true"></i>Objects in space</a></li>
+            <li><a class="content-link" href="#"><i class="link-icon" aria-hidden="true"></i>Playing cards with coyote</a></li>
+            <li><a class="content-link" href="#"><i class="link-icon" aria-hidden="true"></i>Goodbye Yellow Brick Road</a></li>
+            <li><a class="content-link" href="#"><i class="link-icon" aria-hidden="true"></i>The Garden of Forking Paths</a></li>
+            <li><a class="content-link" href="#"><i class="link-icon" aria-hidden="true"></i>Future Shock</a></li>
           </ul>
         </div>
       </div>
 
       <div class="content has-text-centered">
         <div class="soc">
-          <a href="#"><span class="visuallyhidden">GitHub icon</span><i class="fab fa-github-alt fa-2x"></i></a>
-          <a href="#"><span class="visuallyhidden">YouTube icon</span><i class="fab fa-youtube fa-2x"></i></a>
-          <a href="#"><span class="visuallyhidden">Facebook icon</span><i class="fab fa-facebook fa-2x"></i></a>
-          <a href="#"><span class="visuallyhidden">Twitter icon</span><i class="fab fa-twitter fa-2x"></i></a>
+          <a href="#"><span class="visuallyhidden">GitHub icon</span><i class="fab fa-github-alt fa-2x" aria-hidden="true"></i></a>
+          <a href="#"><span class="visuallyhidden">YouTube icon</span><i class="fab fa-youtube fa-2x" aria-hidden="true"></i></a>
+          <a href="#"><span class="visuallyhidden">Facebook icon</span><i class="fab fa-facebook fa-2x" aria-hidden="true"></i></a>
+          <a href="#"><span class="visuallyhidden">Twitter icon</span><i class="fab fa-twitter fa-2x" aria-hidden="true"></i></a>
         </div>
-        <p>The source code is licensed <a class="content-link" href="http://opensource.org/licenses/mit-license.php"><i class="external-link-icon"></i>MIT</a>.</p>
+        <p>The source code is licensed <a class="content-link" href="http://opensource.org/licenses/mit-license.php"><i class="external-link-icon" aria-hidden="true"></i>MIT</a>.</p>
       </div>
     </div>
   </footer>
 
-  <div id="modal-card" class="modal modal-fx-3dSlit">
+  <div role="dialog" aria-modal="true" aria-labelledby="dialog-desc1" id="modal-card" class="modal modal-fx-3dSlit">
+    <span class="visuallyhidden" id="dialog-desc1" aria-hidden="true">Dialog with larger image and extended description</span>
     <div class="modal-background"></div>
     <div class="modal-content is-tiny">
       <div class="card">
@@ -1324,7 +1337,8 @@
     <button class="modal-close is-large"></button>
   </div>
 
-  <div id="modal-image1" class="modal modal-fx-3dSlit">
+  <div role="dialog" aria-modal="true" aria-labelledby="dialog-desc2" id="modal-image1" class="modal modal-fx-3dSlit">
+    <span class="visuallyhidden" id="dialog-desc2" aria-hidden="true">Dialog with larger image</span>
     <div class="modal-background"></div>
     <div class="modal-content is-huge is-image">
       <img alt="Random description of random image" src="https://source.unsplash.com/random/?sig=1">
@@ -1332,7 +1346,8 @@
     <button class="modal-close is-large"></button>
   </div>
 
-  <div id="modal-image2" class="modal modal-fx-superScaled">
+  <div role="dialog" aria-modal="true" aria-labelledby="dialog-desc3" id="modal-image2" class="modal modal-fx-superScaled">
+    <span class="visuallyhidden" id="dialog-desc3" aria-hidden="true">Dialog with larger image</span>
     <div class="modal-background"></div>
     <div class="modal-content  is-image">
       <img alt="Random description of random image" src="https://source.unsplash.com/random/?sig=3">
@@ -1342,5 +1357,22 @@
 
   <script src="https://unpkg.com/bulma-modal-fx/dist/js/modal-fx.min.js"></script>
   <script async src="js/custom.js"></script>
+  <script>
+    (function() {
+      var notifyButton = document.getElementById('notify-button'),
+          liveArea = document.getElementById('live-area'),
+          messages = ['Oh my God! Notify button color has changed!', 'I can\'t believe it! Button color is changed again!'],
+          index = 0;
+      if (!notifyButton || !liveArea) return;
+      setInterval(function() {
+        var r = Math.floor(Math.random() * 256),
+            g = Math.floor(Math.random() * 256),
+            b = Math.floor(Math.random() * 256);
+        notifyButton.style.backgroundColor = '#' + r.toString(16) + g.toString(16) + b.toString(16);
+        liveArea.innerText = messages[index];
+        index = +(!index);
+      }, 60000);
+    })();
+  </script>
 </body>
 </html>
