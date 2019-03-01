@@ -326,30 +326,30 @@
           <h5 class="subtitle">We are always in touch we the outside world</h5>
         </header>
       </div>
-      <div class="tabs is-boxed is-centered main-menu" id="nav" role="tablist">
+      <div class="tabs is-boxed is-centered main-menu" id="nav" role="tablist" aria-label="A list of tab elements" tabindex="0">
         <ul>
-          <li data-target="pane-1" id="1" role="tab">
-            <a tabindex="0">
+          <li data-target="pane-1" id="1" role="tab" aria-controls="pane-1">
+            <a>
               <span class="icon is-small" aria-hidden="true"><i class="fa fa-image"></i></span>
-              <span>Pictures</span>
+              <span id="pane-1-label">Pictures</span>
             </a>
           </li>
-          <li data-target="pane-2" id="2" class="is-active" role="tab" aria-selected="true">
-            <a tabindex="0">
+          <li data-target="pane-2" id="2" class="is-active" aria-selected="true" role="tab" aria-controls="pane-2">
+            <a>
               <span class="icon is-small" aria-hidden="true"><i class="fab fa-empire"></i></span>
-              <span>Article</span>
+              <span id="pane-2-label">Article</span>
             </a>
           </li>
-          <li data-target="pane-3" id="3" role="tab">
-            <a tabindex="0">
+          <li data-target="pane-3" id="3" role="tab" aria-controls="pane-3">
+            <a>
               <span class="icon is-small" aria-hidden="true"><i class="fab fa-superpowers"></i></span>
-              <span>Team</span>
+              <span id="pane-3-label">Team</span>
             </a>
           </li>
-          <li data-target="pane-4" id="4" role="tab">
-            <a tabindex="0">
+          <li data-target="pane-4" id="4" role="tab" aria-controls="pane-4">
+            <a>
               <span class="icon is-small" aria-hidden="true"><i class="fa fa-film"></i></span>
-              <span>Video</span>
+              <span id="pane-4-label">Video</span>
             </a>
           </li>
         </ul>
@@ -358,7 +358,7 @@
 
     <section class="tab-content container" aria-labelledby="content">
       <span class="visuallyhidden" id="content" aria-hidden="true">Topic content</span>
-      <div class="tab-pane" id="pane-1" class="level" role="tabpanel">
+      <div class="tab-pane" id="pane-1" class="level" role="tabpanel" aria-labelledby="pane-1-label">
         <div class="container">
           <div class="columns features">
             <div class="column is-4">
@@ -414,7 +414,103 @@
         </div>
       </div>
 
-      <div class="tab-pane" id="pane-3" role="tabpanel">
+      <div class="tab-pane is-active" id="pane-2" role="tabpanel" aria-labelledby="pane-2-label">
+        <article class="content">
+          <h2 class="is-1 title">Hello World</h2>
+          <p>Lorem ipsum<sup><a class="content-link" href="#">[1]</a></sup> dolor sit amet, consectetur adipiscing elit. Nulla accumsan, metus ultrices eleifend gravida, nulla nunc varius lectus, nec rutrum justo nibh eu lectus. Ut vulputate semper dui. Fusce erat odio, sollicitudin vel erat vel, interdum mattis neque. Sub<sub>script</sub> works as well!</p>
+          <h3 class="is-2 title">Second level</h3>
+          <p>Curabitur accumsan turpis pharetra <strong>augue tincidunt</strong> blandit. Quisque condimentum maximus mi, sit amet commodo arcu rutrum id. Proin pretium urna vel cursus venenatis. Suspendisse potenti. Etiam mattis sem rhoncus lacus dapibus facilisis. Donec at dignissim dui. Ut et neque nisl.</p>
+          <ul>
+            <li>In fermentum leo eu lectus mollis, quis dictum mi aliquet.</li>
+            <li>Morbi eu nulla lobortis, lobortis est in, fringilla felis.</li>
+            <li>Aliquam nec felis in sapien venenatis viverra fermentum nec lectus.</li>
+            <li>Ut non enim metus.</li>
+          </ul>
+          <h4 class="is-3 title">Third level</h4>
+          <p>Quisque ante lacus, malesuada ac auctor vitae, congue <a class="content-link" href="#"><i class="external-link-icon" aria-hidden="true"></i>non ante</a>. Phasellus lacus ex, semper ac tortor nec, fringilla condimentum orci. Fusce eu rutrum tellus.</p>
+          <ol>
+            <li>Donec blandit a lorem id convallis.</li>
+            <li>Cras gravida arcu at diam gravida gravida.</li>
+            <li>Integer in volutpat libero.</li>
+            <li>Donec a diam tellus.</li>
+            <li>Aenean nec tortor orci.</li>
+            <li>Quisque aliquam cursus urna, non bibendum massa viverra eget.</li>
+            <li>Vivamus maximus ultricies pulvinar.</li>
+          </ol>
+          <blockquote>Ut venenatis, nisl scelerisque sollicitudin fermentum, quam libero hendrerit ipsum, ut blandit est tellus sit amet turpis.</blockquote>
+          <p>Quisque at semper enim, eu hendrerit odio. Etiam auctor nisl et <em>justo sodales</em> elementum. Maecenas ultrices lacus quis neque consectetur, et lobortis nisi molestie.</p>
+          <p>Sed sagittis enim ac tortor maximus rutrum. Nulla facilisi. Donec mattis vulputate risus in luctus. Maecenas vestibulum interdum commodo.</p>
+          <dl>
+            <dt>Web</dt>
+            <dd>The part of the Internet that contains websites and web pages</dd>
+            <dt>HTML</dt>
+            <dd>A markup language for creating web pages</dd>
+            <dt>CSS</dt>
+            <dd>A technology to make HTML look better</dd>
+          </dl>
+          <p>Suspendisse egestas sapien non felis placerat elementum. Morbi tortor nisl, suscipit sed mi sit amet, mollis malesuada nulla. Nulla facilisi. Nullam ac erat ante.</p>
+          <h5 class="is-4 title">Fourth level</h5>
+          <p>Nulla efficitur eleifend nisi, sit amet bibendum sapien fringilla ac. Mauris euismod metus a tellus laoreet, at elementum ex efficitur.</p>
+          <pre>
+              &lt;!DOCTYPE html&gt;
+              &lt;html&gt;
+                  &lt;head&gt;
+                  &lt;title&gt;Hello World&lt;/title&gt;
+                  &lt;/head&gt;
+                  &lt;body&gt;
+                  &lt;p&gt;Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+                  Donec viverra nec nulla vitae mollis.&lt;/p&gt;
+                  &lt;/body&gt;
+              &lt;/html&gt;
+              </pre>
+          <p>Maecenas eleifend sollicitudin dui, faucibus sollicitudin augue cursus non. Ut finibus eleifend arcu ut vehicula. Mauris eu est maximus est porta condimentum in eu justo. Nulla id iaculis sapien.</p>
+          <table>
+            <thead>
+            <tr>
+              <th>One</th>
+              <th>Two</th>
+            </tr>
+            </thead>
+            <tbody>
+            <tr>
+              <td>Three</td>
+              <td>Four</td>
+            </tr>
+            <tr>
+              <td>Five</td>
+              <td>Six</td>
+            </tr>
+            <tr>
+              <td>Seven</td>
+              <td>Eight</td>
+            </tr>
+            <tr>
+              <td>Nine</td>
+              <td>Ten</td>
+            </tr>
+            <tr>
+              <td>Eleven</td>
+              <td>Twelve</td>
+            </tr>
+            </tbody>
+          </table>
+          <p>Phasellus porttitor enim id metus volutpat ultricies. Ut nisi nunc, blandit sed dapibus at, vestibulum in felis. Etiam iaculis lorem ac nibh bibendum rhoncus. Nam interdum efficitur ligula sit amet ullamcorper. Etiam tristique, leo vitae porta faucibus, mi lacus laoreet metus, at cursus leo est vel tellus. Sed ac posuere est. Nunc ultricies nunc neque, vitae ultricies ex sodales quis. Aliquam eu nibh in libero accumsan pulvinar. Nullam nec nisl placerat, pretium metus vel, euismod ipsum. Proin tempor cursus nisl vel condimentum. Nam pharetra varius metus non pellentesque.</p>
+          <h6 class="is-5 title">Fifth level</h6>
+          <p>Aliquam sagittis rhoncus vulputate. Cras non luctus sem, sed tincidunt ligula. Vestibulum at nunc elit. Praesent aliquet ligula mi, in luctus elit volutpat porta. Phasellus molestie diam vel nisi sodales, a eleifend augue laoreet. Sed nec eleifend justo. Nam et sollicitudin odio.</p>
+          <figure>
+            <img alt="Random description of random image" src="https://source.unsplash.com/random/256x256/?sig=10">
+            <img alt="Random description of random image" src="https://source.unsplash.com/random/256x256/?sig=11">
+            <img alt="Random description of random image" src="https://source.unsplash.com/random/256x256/?sig=12">
+            <figcaption>
+              Figure 1: Some beautiful placeholders
+            </figcaption>
+          </figure>
+          <h7 class="is-6 title">Sixth level</h7>
+          <p>Cras in nibh lacinia, venenatis nisi et, auctor urna. Donec pulvinar lacus sed diam dignissim, ut eleifend eros accumsan. Phasellus non tortor eros. Ut sed rutrum lacus. Etiam purus nunc, scelerisque quis enim vitae, malesuada ultrices turpis. Nunc vitae maximus purus, nec consectetur dui. Suspendisse euismod, elit vel rutrum commodo, ipsum tortor maximus dui, sed varius sapien odio vitae est. Etiam at cursus metus.</p>
+        </article>
+      </div>
+
+      <div class="tab-pane" id="pane-3" role="tabpanel" aria-labelledby="pane-3-label">
         <div class="columns medias">
           <div class="column">
             <div class="media">
@@ -475,7 +571,7 @@
         </div>
       </div>
 
-      <div class="tab-pane" id="pane-4" role="tabpanel">
+      <div class="tab-pane" id="pane-4" role="tabpanel" aria-labelledby="pane-4-label">
         <div class="columns is-centered">
           <div class="column is-three-quarters">
             <div class="title has-text-centered">Inspired video</div>
@@ -486,101 +582,6 @@
         </div>
       </div>
 
-      <div class="tab-pane is-active" id="pane-2" role="tabpanel">
-        <article class="content">
-          <h2 class="is-1 title">Hello World</h2>
-          <p>Lorem ipsum<sup><a class="content-link" href="#">[1]</a></sup> dolor sit amet, consectetur adipiscing elit. Nulla accumsan, metus ultrices eleifend gravida, nulla nunc varius lectus, nec rutrum justo nibh eu lectus. Ut vulputate semper dui. Fusce erat odio, sollicitudin vel erat vel, interdum mattis neque. Sub<sub>script</sub> works as well!</p>
-          <h3 class="is-2 title">Second level</h3>
-          <p>Curabitur accumsan turpis pharetra <strong>augue tincidunt</strong> blandit. Quisque condimentum maximus mi, sit amet commodo arcu rutrum id. Proin pretium urna vel cursus venenatis. Suspendisse potenti. Etiam mattis sem rhoncus lacus dapibus facilisis. Donec at dignissim dui. Ut et neque nisl.</p>
-          <ul>
-            <li>In fermentum leo eu lectus mollis, quis dictum mi aliquet.</li>
-            <li>Morbi eu nulla lobortis, lobortis est in, fringilla felis.</li>
-            <li>Aliquam nec felis in sapien venenatis viverra fermentum nec lectus.</li>
-            <li>Ut non enim metus.</li>
-          </ul>
-          <h4 class="is-3 title">Third level</h4>
-          <p>Quisque ante lacus, malesuada ac auctor vitae, congue <a class="content-link" href="#"><i class="external-link-icon" aria-hidden="true"></i>non ante</a>. Phasellus lacus ex, semper ac tortor nec, fringilla condimentum orci. Fusce eu rutrum tellus.</p>
-          <ol>
-            <li>Donec blandit a lorem id convallis.</li>
-            <li>Cras gravida arcu at diam gravida gravida.</li>
-            <li>Integer in volutpat libero.</li>
-            <li>Donec a diam tellus.</li>
-            <li>Aenean nec tortor orci.</li>
-            <li>Quisque aliquam cursus urna, non bibendum massa viverra eget.</li>
-            <li>Vivamus maximus ultricies pulvinar.</li>
-          </ol>
-          <blockquote>Ut venenatis, nisl scelerisque sollicitudin fermentum, quam libero hendrerit ipsum, ut blandit est tellus sit amet turpis.</blockquote>
-          <p>Quisque at semper enim, eu hendrerit odio. Etiam auctor nisl et <em>justo sodales</em> elementum. Maecenas ultrices lacus quis neque consectetur, et lobortis nisi molestie.</p>
-          <p>Sed sagittis enim ac tortor maximus rutrum. Nulla facilisi. Donec mattis vulputate risus in luctus. Maecenas vestibulum interdum commodo.</p>
-          <dl>
-            <dt>Web</dt>
-            <dd>The part of the Internet that contains websites and web pages</dd>
-            <dt>HTML</dt>
-            <dd>A markup language for creating web pages</dd>
-            <dt>CSS</dt>
-            <dd>A technology to make HTML look better</dd>
-          </dl>
-          <p>Suspendisse egestas sapien non felis placerat elementum. Morbi tortor nisl, suscipit sed mi sit amet, mollis malesuada nulla. Nulla facilisi. Nullam ac erat ante.</p>
-          <h5 class="is-4 title">Fourth level</h5>
-          <p>Nulla efficitur eleifend nisi, sit amet bibendum sapien fringilla ac. Mauris euismod metus a tellus laoreet, at elementum ex efficitur.</p>
-          <pre>
-              &lt;!DOCTYPE html&gt;
-              &lt;html&gt;
-                  &lt;head&gt;
-                  &lt;title&gt;Hello World&lt;/title&gt;
-                  &lt;/head&gt;
-                  &lt;body&gt;
-                  &lt;p&gt;Lorem ipsum dolor sit amet, consectetur adipiscing elit.
-                  Donec viverra nec nulla vitae mollis.&lt;/p&gt;
-                  &lt;/body&gt;
-              &lt;/html&gt;
-              </pre>
-          <p>Maecenas eleifend sollicitudin dui, faucibus sollicitudin augue cursus non. Ut finibus eleifend arcu ut vehicula. Mauris eu est maximus est porta condimentum in eu justo. Nulla id iaculis sapien.</p>
-          <table>
-            <thead>
-              <tr>
-                <th>One</th>
-                <th>Two</th>
-              </tr>
-            </thead>
-            <tbody>
-              <tr>
-                <td>Three</td>
-                <td>Four</td>
-              </tr>
-              <tr>
-                <td>Five</td>
-                <td>Six</td>
-              </tr>
-              <tr>
-                <td>Seven</td>
-                <td>Eight</td>
-              </tr>
-              <tr>
-                <td>Nine</td>
-                <td>Ten</td>
-              </tr>
-              <tr>
-                <td>Eleven</td>
-                <td>Twelve</td>
-              </tr>
-            </tbody>
-          </table>
-          <p>Phasellus porttitor enim id metus volutpat ultricies. Ut nisi nunc, blandit sed dapibus at, vestibulum in felis. Etiam iaculis lorem ac nibh bibendum rhoncus. Nam interdum efficitur ligula sit amet ullamcorper. Etiam tristique, leo vitae porta faucibus, mi lacus laoreet metus, at cursus leo est vel tellus. Sed ac posuere est. Nunc ultricies nunc neque, vitae ultricies ex sodales quis. Aliquam eu nibh in libero accumsan pulvinar. Nullam nec nisl placerat, pretium metus vel, euismod ipsum. Proin tempor cursus nisl vel condimentum. Nam pharetra varius metus non pellentesque.</p>
-          <h6 class="is-5 title">Fifth level</h6>
-          <p>Aliquam sagittis rhoncus vulputate. Cras non luctus sem, sed tincidunt ligula. Vestibulum at nunc elit. Praesent aliquet ligula mi, in luctus elit volutpat porta. Phasellus molestie diam vel nisi sodales, a eleifend augue laoreet. Sed nec eleifend justo. Nam et sollicitudin odio.</p>
-          <figure>
-            <img alt="Random description of random image" src="https://source.unsplash.com/random/256x256/?sig=10">
-            <img alt="Random description of random image" src="https://source.unsplash.com/random/256x256/?sig=11">
-            <img alt="Random description of random image" src="https://source.unsplash.com/random/256x256/?sig=12">
-            <figcaption>
-              Figure 1: Some beautiful placeholders
-            </figcaption>
-          </figure>
-          <h7 class="is-6 title">Sixth level</h7>
-          <p>Cras in nibh lacinia, venenatis nisi et, auctor urna. Donec pulvinar lacus sed diam dignissim, ut eleifend eros accumsan. Phasellus non tortor eros. Ut sed rutrum lacus. Etiam purus nunc, scelerisque quis enim vitae, malesuada ultrices turpis. Nunc vitae maximus purus, nec consectetur dui. Suspendisse euismod, elit vel rutrum commodo, ipsum tortor maximus dui, sed varius sapien odio vitae est. Etiam at cursus metus.</p>
-        </article>
-      </div>
     </section>
 
     <section class="section has-background-grey-lighter" aria-labelledby="tours">
