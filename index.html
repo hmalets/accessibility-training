@@ -84,7 +84,6 @@
               </p>
               <p class="control">
                 <a role="button" tabindex="0" class="button is-info" id="notify-button">Notify Me</a>
-                <span aria-live="polite" class="visuallyhidden" id="live-area"></span>
               </p>
             </div>
           </div>
@@ -1035,95 +1034,101 @@
       </div>
     </section>
 
-    <section class="section has-background-light" aria-labelledby="contact-us">
-      <span class="visuallyhidden" id="contact-us" aria-hidden="true">Contact form</span>
+    <section class="section has-background-light" aria-labelledby="register-team">
+      <span class="visuallyhidden" id="register-team" aria-hidden="true">Registration form</span>
       <div class="container">
         <header class="section-heading has-text-centered">
-          <h2 class="title is-2">Contact us</h2>
-          <h5 class="subtitle is-5">Don't hesitate, ask anything</h5>
+          <h2 class="title is-2">Register My Team</h2>
+          <h5 class="subtitle is-5">Don't hesitate, join us</h5>
         </header>
 
-        <form class="column is-half is-offset-one-quarter box" action="#">
+        <form novalidate class="column is-half is-offset-one-quarter box" name="register" aria-labelledby="form-label" action="javascript:saveUser()">
+          <span class="visuallyhidden" id="form-label" aria-hidden="true">Please enter information about new user</span>
+          <span class="visuallyhidden" id="form-validation-live" aria-live="assertive"></span>
           <div class="field">
-            <label class="label" for="name">Name</label>
-            <div class="control">
-              <input id="name" class="input" type="text" placeholder="Please input name">
+            <label class="label" for="username">Username</label>
+            <div class="control has-icons-left has-icons-right">
+              <input id="username" class="input" type="text" placeholder="Please input username" aria-describedby="username-error">
+              <span class="icon is-small is-left" aria-hidden="true">
+                <i class="fas fa-user"></i>
+              </span>
+              <span class="icon is-small is-right error-icon hidden" aria-hidden="true">
+                <i class="fas fa-exclamation-triangle"></i>
+              </span>
+            </div>
+            <p class="help is-danger error-message" id="username-error"></p>
+          </div>
+
+          <div class="two-columns">
+            <div class="field">
+              <label class="label" for="name">Name</label>
+              <div class="control has-icons-right">
+                <input id="name" class="input" type="text" placeholder="Please input name" aria-describedby="name-error">
+                <span class="icon is-small is-right error-icon hidden" aria-hidden="true">
+                  <i class="fas fa-exclamation-triangle"></i>
+                </span>
+              </div>
+              <p class="help is-danger error-message" id="name-error"></p>
+            </div>
+
+            <div class="field">
+              <label class="label" for="surname">Surname</label>
+              <div class="control has-icons-right">
+                <input id="surname" class="input" type="text" placeholder="Please input surname" aria-describedby="surname-error">
+                <span class="icon is-small is-right error-icon hidden" aria-hidden="true">
+                  <i class="fas fa-exclamation-triangle"></i>
+                </span>
+              </div>
+              <p class="help is-danger error-message" id="surname-error"></p>
             </div>
           </div>
 
           <div class="field">
-            <label class="label" for="username">Username</label>
-            <div class="control has-icons-left has-icons-right">
-              <input id="username" class="input is-success" type="text" placeholder="Please input username">
-              <span class="icon is-small is-left" aria-hidden="true">
-                <i class="fas fa-user"></i>
-              </span>
-              <span class="icon is-small is-right" aria-hidden="true">
-                <i class="fas fa-check"></i>
+            <label class="label" for="address">Address</label>
+            <div class="control has-icons-right">
+              <input id="address" class="input" type="text" placeholder="Please input address" aria-describedby="address-error">
+              <span class="icon is-small is-right error-icon hidden" aria-hidden="true">
+                <i class="fas fa-exclamation-triangle"></i>
               </span>
             </div>
-            <p class="help is-success">This username is available</p>
+            <p class="help is-danger error-message" id="address-error"></p>
+          </div>
+
+          <div class="two-columns">
+            <div class="field">
+              <label class="label" for="zipcode">Zip code</label>
+              <div class="control">
+                <input id="zipcode" class="input" type="text" placeholder="Please input zip code">
+              </div>
+            </div>
+
+            <div class="field">
+              <label class="label" for="phone">Phone number</label>
+              <div class="control has-icons-right">
+                <input id="phone" class="input" type="text" placeholder="Please input phone number" aria-describedby="phone-error">
+                <span class="icon is-small is-right error-icon hidden" aria-hidden="true">
+                  <i class="fas fa-exclamation-triangle"></i>
+                </span>
+              </div>
+              <p class="help is-danger error-message" id="phone-error"></p>
+            </div>
           </div>
 
           <div class="field">
             <label class="label" for="email">Email</label>
             <div class="control has-icons-left has-icons-right">
-              <input id="email" class="input is-danger" type="email" placeholder="Please input email" value="hello@" aria-invalid="true">
+              <input id="email" class="input" type="email" placeholder="Please input email" aria-describedby="email-error">
               <span class="icon is-small is-left" aria-hidden="true">
                 <i class="fas fa-envelope"></i>
               </span>
-              <span class="icon is-small is-right" aria-hidden="true">
+              <span class="icon is-small is-right error-icon hidden" aria-hidden="true">
                 <i class="fas fa-exclamation-triangle"></i>
               </span>
             </div>
-            <p class="help is-danger">This email is invalid</p>
+            <p class="help is-danger error-message" id="email-error"></p>
           </div>
 
-          <div class="field">
-            <label class="label" for="subject">Subject</label>
-            <div class="control">
-              <div class="select">
-                <select id="subject">
-                  <option>Select dropdown</option>
-                  <option>With options</option>
-                </select>
-              </div>
-            </div>
-          </div>
-
-          <div class="field">
-            <label class="label" for="message">Message</label>
-            <div class="control">
-              <textarea id="message" class="textarea" placeholder="Textarea"></textarea>
-            </div>
-          </div>
-
-          <div class="field">
-            <div class="control">
-              <label class="checkbox">
-                <input type="checkbox">
-                I agree to the <a class="content-link" href="#"><i class="link-icon" aria-hidden="true"></i>terms and conditions</a>
-              </label>
-            </div>
-          </div>
-
-          <div class="field">
-            <div class="control">
-              <fieldset>
-                <legend class="visuallyhidden">Agree to terms and conditions radio buttons</legend>
-                <label class="radio">
-                  <input type="radio" name="question">
-                  Yes
-                </label>
-                <label class="radio">
-                  <input type="radio" name="question">
-                  No
-                </label>
-              </fieldset>
-            </div>
-          </div>
-
-          <div class="field is-grouped">
+          <div class="field is-grouped form-buttons">
             <div class="control">
               <button type="submit" class="button is-link">Submit</button>
             </div>
@@ -1356,24 +1361,9 @@
     <button class="modal-close is-large"></button>
   </div>
 
+  <div aria-live="polite" id="live-area" class="visuallyhidden"></div>
+
   <script src="https://unpkg.com/bulma-modal-fx/dist/js/modal-fx.min.js"></script>
   <script async src="js/custom.js"></script>
-  <script>
-    (function() {
-      var notifyButton = document.getElementById('notify-button'),
-          liveArea = document.getElementById('live-area'),
-          messages = ['Oh my God! Notify button color has changed!', 'I can\'t believe it! Button color is changed again!'],
-          index = 0;
-      if (!notifyButton || !liveArea) return;
-      setInterval(function() {
-        var r = Math.floor(Math.random() * 256),
-            g = Math.floor(Math.random() * 256),
-            b = Math.floor(Math.random() * 256);
-        notifyButton.style.backgroundColor = '#' + r.toString(16) + g.toString(16) + b.toString(16);
-        liveArea.innerText = messages[index];
-        index = +(!index);
-      }, 60000);
-    })();
-  </script>
 </body>
 </html>

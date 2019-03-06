@@ -243,6 +243,43 @@ input[type=radio]:focus,
   margin-bottom: .5rem;
 }
 
+.two-columns {
+  display: flex;
+  justify-content: flex-start;
+}
+
+.two-columns .field {
+  width: 50%;
+}
+
+.two-columns .field:first-child {
+  margin-right: 10px;
+}
+
+.two-columns .field:last-child {
+  margin-left: 10px;
+}
+
+.form-buttons {
+  margin-top: 40px;
+}
+
+.hidden {
+  display: none;
+}
+
+#live-area {
+  border: 2px solid green;
+  background-color: #d5ffd5;
+  padding: 50px;
+  width: 400px;
+  text-align: center;
+  color: green;
+  position: fixed;
+  top: 20px;
+  left: 50%;
+  margin-left: -200px;
+}
 
 @media screen and (max-width: 1087px) {
   .navbar-menu {
